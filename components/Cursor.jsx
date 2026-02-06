@@ -27,7 +27,7 @@ export default function Cursor({ mousePos, variant }) {
 
   return (
     <motion.div
-      className="fixed w-8 h-8 rounded-full pointer-events-none z-50 transition-all duration-150"
+      className="hidden md:block fixed w-8 h-8 rounded-full pointer-events-none z-50 transition-all duration-150"
       animate={variants[variant]}
       transition={{ type: "spring", stiffness: 500, damping: 28 }}
     />

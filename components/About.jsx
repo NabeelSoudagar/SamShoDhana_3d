@@ -40,7 +40,7 @@ export default function About({ setCursorVariant }) {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <motion.h2
-            className="text-6xl md:text-7xl font-black mb-8 leading-tight"
+            className="text-4xl md:text-7xl font-black mb-8 leading-tight"
             initial={{ opacity: 0, x: -100 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1 }}

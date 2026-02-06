@@ -35,7 +35,7 @@ function ServiceCard({ service, index, setCursorVariant }) {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
-      whileHover={{ 
+      whileHover={{
         scale: 1.05,
         rotateY: 5,
         rotateX: 5
@@ -46,7 +46,7 @@ function ServiceCard({ service, index, setCursorVariant }) {
     >
       {/* Background gradient on hover */}
       <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-      
+
       <div className="relative z-10">
         <motion.div
           className="text-6xl mb-6"
@@ -55,15 +55,15 @@ function ServiceCard({ service, index, setCursorVariant }) {
         >
           {service.icon}
         </motion.div>
-        
+
         <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
           {service.title}
         </h3>
-        
+
         <p className="text-gray-400 leading-relaxed mb-6">
           {service.description}
         </p>
-        
+
         <motion.button
           className="text-white font-semibold flex items-center group-hover:text-purple-300 transition-colors"
           whileHover={{ x: 10 }}
@@ -78,7 +78,7 @@ function ServiceCard({ service, index, setCursorVariant }) {
           </motion.span>
         </motion.button>
       </div>
-      
+
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(5)].map((_, i) => (
@@ -117,8 +117,8 @@ export default function Services({ setCursorVariant }) {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1 }}
       >
-        <h2 
-          className="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent"
+        <h2
+          className="text-4xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent"
           onMouseEnter={() => setCursorVariant('text')}
           onMouseLeave={() => setCursorVariant('default')}
         >
@@ -131,9 +131,9 @@ export default function Services({ setCursorVariant }) {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
-          <ServiceCard 
-            key={service.title} 
-            service={service} 
+          <ServiceCard
+            key={service.title}
+            service={service}
             index={index}
             setCursorVariant={setCursorVariant}
           />

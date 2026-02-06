@@ -99,7 +99,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         <motion.h1
-          className="text-7xl md:text-9xl font-black mb-8 leading-none"
+          className="text-5xl md:text-9xl font-black mb-8 leading-none"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}

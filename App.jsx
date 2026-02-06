@@ -639,7 +639,7 @@ export default function App() {
       <section className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <h2 className="text-4xl font-bold mb-8 text-center">Program Execution</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Program Execution</h2>
 
             <div className="space-y-8">
               <div className="program-execution-step directional-enter">
@@ -689,7 +689,7 @@ export default function App() {
       <section className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <h2 className="text-4xl font-bold mb-6 text-center">Program Timeline</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Program Timeline</h2>
             <p className="text-xl text-center mb-8 text-yellow-400"><strong>Duration:</strong> 1st December 2025 to 31st November 2026</p>
 
             <h3 className="text-2xl font-bold mb-6 text-center">Mandatory Stages</h3>
@@ -723,7 +723,7 @@ export default function App() {
       {/* Benefits for Students */}
       <section className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">BENEFITS FOR STUDENTS</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">BENEFITS FOR STUDENTS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "AI CERTIFIED", desc: "Earn prestigious certification endorsed by top global MNCs", color: "blue" },
@@ -760,7 +760,7 @@ export default function App() {
       <section className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <h2 className="text-4xl font-bold mb-6 text-center">Registration Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Registration Process</h2>
             <ul className="list-disc list-inside space-y-3 text-lg text-gray-300">
               <li>Colleges select and nominate top 100 students from 3rd semester across all branches</li>
               <li>Students form 5 teams (4 members/team) per department</li>
