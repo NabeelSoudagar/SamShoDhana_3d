@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import ImageSequence from "./components/ImageSequence";
 import Lenis from "@studio-freight/lenis";
@@ -25,6 +25,23 @@ import "./styles/Theme.css";
 
 export default function App() {
   const { theme } = useTheme();
+  const [cursorVariant, setCursorVariant] = useState("default");
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePos({
+        x: e.clientX,
+        y: e.clientY
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
 
   // Counter hooks for statistics
   const counter1 = useFormattedCounter(3000, 2500);
@@ -753,10 +770,11 @@ export default function App() {
         </div>
       </section>
 
-      <About />
-      <Services />
-      <Projects />
-      <Contact />
+      <About setCursorVariant={setCursorVariant} />
+      <Services setCursorVariant={setCursorVariant} />
+      <Projects setCursorVariant={setCursorVariant} />
+      <Contact setCursorVariant={setCursorVariant} />
+      <Cursor mousePos={mousePos} variant={cursorVariant} />
     </div>
   );
 }
