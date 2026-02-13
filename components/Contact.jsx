@@ -24,7 +24,7 @@ export default function Contact({ setCursorVariant }) {
   };
 
   return (
-    <section ref={sectionRef} id="contact" className="py-32 px-6 max-w-7xl mx-auto">
+    <section ref={sectionRef} id="contact" className="py-32 px-6 max-w-7xl mx-auto relative z-10">
       <motion.div
         className="text-center mb-20"
         initial={{ opacity: 0, y: 50 }}

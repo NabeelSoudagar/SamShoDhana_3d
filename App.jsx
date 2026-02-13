@@ -450,14 +450,16 @@ export default function App() {
       <Navigation />
       <Hero />
 
-
       {/* About SamShoDhana */}
-      <section className="py-20 px-6 relative z-10">
+      <section id="about" className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 slide-panel">
             <h2 className="text-4xl font-bold mb-6 text-center">About SamShoDhana</h2>
+            <p className="text-lg leading-relaxed text-gray-300 mb-6">
+              We transform ideas into extraordinary digital experiences through cutting-edge technology and creative excellence
+            </p>
             <p className="text-lg leading-relaxed text-gray-300">
-              SamShoDhana is a transformative initiative dedicated to strengthening Karnataka's rural
+              SamShoDhana is a transformative initiative dedicated to strengthening Karnataka’s rural
               MSME ecosystem by developing 3,000+ tech-driven solutions and 1,550+ scalable technology
               products that address real, on-ground industry challenges. The program also focuses on
               building a future-ready talent pipeline of 6,700 professionals, equipped with advanced
@@ -469,6 +471,7 @@ export default function App() {
 
       {/* Program Statistics */}
       <motion.section
+        id="objectives"
         className="py-20 px-6 relative z-10 fade-on-scroll"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -574,12 +577,13 @@ export default function App() {
               : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
             }`}>
             {[
-              { title: "Tech Solutions", color: "blue", desc: "Develop 3,000+ innovative, technology-enabled solutions addressing real-time challenges faced by rural MSMEs.", delay: 0.3 },
-              { title: "Scalable Products", color: "green", desc: "Build 1,550+ market-ready, accessible tech products supporting MSME productivity and competitiveness.", delay: 0.4 },
-              { title: "Innovation Capacity", color: "purple", desc: "Enable rural enterprises to adopt digital tools, automation, and emerging technologies.", delay: 0.5 },
-              { title: "Talent Development", color: "yellow", desc: "Create a future-ready talent pool of 5,000 professionals with advanced technology skills.", delay: 0.6 },
-              { title: "Economic Growth", color: "red", desc: "Drive inclusive and sustainable economic development by bridging technology gaps.", delay: 0.7 },
-              { title: "Collaborative Innovation", color: "indigo", desc: "Build a statewide ecosystem bringing together academia, industry, startups, and government.", delay: 0.8 }
+              { title: "Develop 3,000+ Tech-Driven Solutions", color: "blue", desc: "Create innovative, technology-enabled solutions that directly address real-time challenges faced by rural MSMEs across Karnataka.", delay: 0.3 },
+              { title: "Build 1,550+ Scalable Technology Products", color: "green", desc: "Design and deploy market-ready, accessible, and scalable tech products that support MSMEs in improving productivity and efficiency.", delay: 0.4 },
+              { title: "Strengthen Rural MSME Innovation Capacity", color: "purple", desc: "Enable rural enterprises to adopt digital tools, automation, and emerging technologies to enhance operational capabilities.", delay: 0.5 },
+              { title: "Create a Future-Ready Talent Pool", color: "yellow", desc: "Train and certify 5,000 professionals and grassroots innovators with advanced technology skills.", delay: 0.6 },
+              { title: "Accelerate Economic Growth", color: "red", desc: "Drive inclusive and sustainable economic development by bridging technology gaps and fostering entrepreneurship.", delay: 0.7 },
+              { title: "Promote Collaborative Innovation", color: "indigo", desc: "Build a statewide ecosystem that brings together academia, industry, startups, and government bodies.", delay: 0.8 },
+              { title: "Enhance Adoption of Affordable Technology", color: "cyan", desc: "Ensure that solutions remain cost-effective and accessible, especially for micro and nano enterprises.", delay: 0.9 }
             ].map((objective, index) => {
               const colorClass = {
                 blue: { text: "text-blue-400 group-hover:text-blue-300", underline: "from-blue-500 to-blue-300", border: "hover:border-blue-400/50" },
@@ -588,6 +592,7 @@ export default function App() {
                 yellow: { text: "text-yellow-400 group-hover:text-yellow-300", underline: "from-yellow-500 to-yellow-300", border: "hover:border-yellow-400/50" },
                 red: { text: "text-red-400 group-hover:text-red-300", underline: "from-red-500 to-red-300", border: "hover:border-red-400/50" },
                 indigo: { text: "text-indigo-400 group-hover:text-indigo-300", underline: "from-indigo-500 to-indigo-300", border: "hover:border-indigo-400/50" },
+                cyan: { text: "text-cyan-400 group-hover:text-cyan-300", underline: "from-cyan-500 to-cyan-300", border: "hover:border-cyan-400/50" },
               }[objective.color];
 
               return (
@@ -636,7 +641,7 @@ export default function App() {
       </motion.section>
 
       {/* Program Execution */}
-      <section className="py-20 px-6 relative z-10">
+      <section id="execution" className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Program Execution</h2>
@@ -658,9 +663,10 @@ export default function App() {
                 <h3 className="text-2xl font-bold mb-4 text-green-400">2-Day District Bootcamp</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                   <li>Email Writing, Documentation, Content Writing & Personality development</li>
-                  <li>Insights about core engineering domains and opportunities</li>
+                  <li>Insights about each core engineering domain and opportunities</li>
                   <li>Research about local industries, clusters and micro entrepreneurs</li>
-                  <li>Stakeholder mapping and field visits</li>
+                  <li>Research about tech products across the globe which are related to district ecosystem</li>
+                  <li>Stakeholder mapping and field visit</li>
                 </ul>
                 <div className="w-full bg-gray-700 rounded-full h-2 mt-4">
                   <div className="progress-bar bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style={{ width: '0%' }}></div>
@@ -670,14 +676,39 @@ export default function App() {
               <div className="program-execution-step directional-enter">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">10-Day Residential Bootcamp at CoEs</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
-                  <li>Advanced training on technical and entrepreneurial skills</li>
-                  <li>Mentor assignment (one mentor per team)</li>
-                  <li>Deep-dive research into stakeholder operations</li>
-                  <li>Identification of high-impact district-level problems</li>
-                  <li>Multiple iteration cycles based on user feedback</li>
+                  <li>Advanced training on core technical and entrepreneurial skills</li>
+                  <li>Mentor assignment (one mentor per team) for continuous guidance</li>
+                  <li>Deep-dive research into stakeholder operations and challenges</li>
+                  <li>Identification of one high-impact district-level problem with scalable potential</li>
+                  <li>Multiple iteration cycles based on user feedback to arrive at a validated business and technical model</li>
                 </ul>
                 <div className="w-full bg-gray-700 rounded-full h-2 mt-4">
                   <div className="progress-bar bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style={{ width: '0%' }}></div>
+                </div>
+              </div>
+
+              <div className="program-execution-step">
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400">District Demo Day</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                  <li>Developed Solutions will be showcased at each district headquarters</li>
+                  <li>Visibility for products built by Future Founders to program stakeholders</li>
+                  <li>Inviting District MP, District Minister and other key authorities</li>
+                  <li>Inviting leading investors of the district to look at the products for their next bet</li>
+                </ul>
+                <div className="w-full bg-gray-700 rounded-full h-2 mt-4">
+                  <div className="progress-bar bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style={{ width: '0%' }}></div>
+                </div>
+              </div>
+
+              <div className="program-execution-step directional-enter">
+                <h3 className="text-2xl font-bold mb-4 text-red-400">State Demo Day</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                  <li>Shortlisted Solutions from the district solution will be showcased at state level</li>
+                  <li>Inviting leading GCC’s to support founders through hiring or EIR Program</li>
+                  <li>Inviting leading investors, family offices and international investors to bet on grass root level innovations</li>
+                </ul>
+                <div className="w-full bg-gray-700 rounded-full h-2 mt-4">
+                  <div className="progress-bar bg-gradient-to-r from-red-400 to-red-600 h-2 rounded-full" style={{ width: '0%' }}></div>
                 </div>
               </div>
             </div>
@@ -686,7 +717,7 @@ export default function App() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 px-6 relative z-10">
+      <section id="timeline" className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Program Timeline</h2>
@@ -695,9 +726,9 @@ export default function App() {
             <h3 className="text-2xl font-bold mb-6 text-center">Mandatory Stages</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { title: "Initial Connection & Problem Identification", desc: "Teams connect with assigned MSMEs and identify core business problems", color: "blue" },
-                { title: "Iterative Solution Development", desc: "Three-version development cycle: Identify → Validate → Solve → Validate → Build → Validate", color: "green" },
-                { title: "Verified Progress Reporting", desc: "Detailed progress documents verified with official MSME seal", color: "purple" }
+                { title: "Initial Connection & Problem Identification", desc: "Student teams will formally connect with their assigned MSME and meet with the founder to identify and document the core business problem.", color: "blue" },
+                { title: "Iterative Solution Development", desc: "Teams must follow a structured, three-version development and validation cycle: Cycle: Identify -> Validate -> Solve -> Validate -> Build -> Validate.", color: "green" },
+                { title: "Verified Progress Reporting", desc: "For each major stage of the project, teams are required to upload a detailed progress document to the online portal. Crucially, each document must be verified with the official seal of the MSME to confirm active collaboration and authenticate the reported progress.", color: "purple" }
               ].map((step, index) => {
                 const colorClass = {
                   blue: { text: "text-blue-400 group-hover:text-blue-300", underline: "from-blue-500 to-blue-300" },
@@ -721,17 +752,17 @@ export default function App() {
       </section>
 
       {/* Benefits for Students */}
-      <section className="py-20 px-6 relative z-10">
+      <section id="benefits" className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">BENEFITS FOR STUDENTS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "AI CERTIFIED", desc: "Earn prestigious certification endorsed by top global MNCs", color: "blue" },
-              { title: "₹2,00,000", desc: "Win cash prizes and gain incubation support for innovative ideas", color: "green" },
-              { title: "DIRECT JOBS", desc: "Industry internships and job opportunities with leading MSMEs", color: "purple" },
-              { title: "MASTERCLASS SERIES", desc: "Learn cutting-edge AI tools and real-world applications across engineering domains", color: "yellow" },
-              { title: "HANDS-ON WORKSHOP", desc: "Solve live MSME challenges and gain practical problem-solving experience", color: "red" },
-              { title: "EXCLUSIVE GOODIES", desc: "Official event merchandise, T-shirts, and more!", color: "indigo" }
+              { title: "AI Fundamentals Certificate", desc: "Earn a prestigious certification endorsed by a top global MNC.", color: "blue" },
+              { title: "Masterclass Series", desc: "Learn cutting-edge AI tools and real-world applications across core engineering domains.", color: "yellow" },
+              { title: "Hands-on Workshop", desc: "Solve live MSME challenges and gain practical problem-solving experience.", color: "red" },
+              { title: "Exciting Rewards", desc: "Win up to ₹2,00,000 in cash prizes and gain incubation support for your innovative ideas.", color: "green" },
+              { title: "Industry Internship & Job Opportunities", desc: "Get placed with leading MSMEs for internships, with the potential for direct job offers based on performance.", color: "purple" },
+              { title: "Exclusive Goodies", desc: "Grab official event merchandise, T-shirts, and more!", color: "indigo" }
             ].map((benefit, index) => {
               const colorClass = {
                 blue: { text: "text-blue-400 group-hover:text-blue-300", underline: "from-blue-500 to-blue-300" },
@@ -756,23 +787,93 @@ export default function App() {
         </div>
       </section>
 
+      {/* Why MSME? */}
+      <section id="why-msme" className="py-20 px-6 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Why MSME?</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-blue-400">Backbone of Economy</h3>
+                <p className="text-gray-300">MSMEs contribute significantly to employment generation and GDP. Yet, most MSMEs in Karnataka and India still operate with traditional, manual processes.</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-green-400">Digital Gap</h3>
+                <p className="text-gray-300">While large enterprises adopt AI, MSMEs lack access to affordable AI-driven solutions. This creates a digital divide, making them less competitive in national and global markets.</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-purple-400">Operational Challenges</h3>
+                <p className="text-gray-300">Inefficiencies in supply chain, finance, customer engagement, and workforce management. Limited data-driven decision-making hampers growth and scalability.</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-yellow-400">Global Competitiveness</h3>
+                <p className="text-gray-300">To survive and thrive in the era of Industry 4.0, MSMEs must embrace AI-powered tools for productivity, innovation, and quality enhancement.</p>
+              </div>
+
+              <div className="space-y-4 md:col-span-2 text-center">
+                <h3 className="text-xl font-bold text-red-400">Sustainable Growth</h3>
+                <p className="text-gray-300">Technology can help MSMEs reduce costs, optimize resources, and explore new market opportunities, leading to long-term, inclusive, and sustainable business growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Registration */}
-      <section className="py-20 px-6 relative z-10">
+      <section id="registration" className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Registration Process</h2>
             <ul className="list-disc list-inside space-y-3 text-lg text-gray-300">
-              <li>Colleges select and nominate top 100 students from 3rd semester across all branches</li>
-              <li>Students form 5 teams (4 members/team) per department</li>
-              <li>Registration fee: Rs. 1,000 for the entire 2-year program</li>
+              <li>College will selects and nominates 3rd Semester top 100 students combining all the branches.</li>
+              <li>Once the college selects the students, students have to form 5 teams(4 members/team) per department</li>
+              <li>Selected students will pay Rs. 1000 and register for the entire 2 years program.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <About setCursorVariant={setCursorVariant} />
-      <Services setCursorVariant={setCursorVariant} />
-      <Projects setCursorVariant={setCursorVariant} />
+      {/* Way Forward and Entrepreneurship Focus */}
+      <section className="py-20 px-6 relative z-10">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Way Forward for Participants</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="p-6 bg-white/5 rounded-xl border border-white/10 text-center">
+                <h3 className="text-xl font-bold mb-3 text-green-400">If product wins investment</h3>
+                <p className="text-gray-300">Students become first-generation founders and scale their solutions.</p>
+              </div>
+              <div className="p-6 bg-white/5 rounded-xl border border-white/10 text-center">
+                <h3 className="text-xl font-bold mb-3 text-blue-400">If skill gets recognized</h3>
+                <p className="text-gray-300">Students become highly employable talent for leading startups, corporates, and GCCs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 text-center">
+            <p className="text-xl md:text-2xl font-bold leading-relaxed text-gray-200">
+              We want to focus on the ENTREPRENEURSHIP and pitch these products to MULTIPLE INVESTORS AND GRANTS. If they win, they will SCALE THE PRODUCT, if not they have strong foundational capacities, great problem solving mindset and technology grip which by default they can tell as the experience to the FUTURE EMPLOYERS.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Accountability */}
+      <section className="py-10 px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-lg text-gray-300 bg-white/5 p-6 rounded-xl border border-white/10">
+            To ensure accountability, tangible outcomes, and clear progress monitoring, all student teams will follow a structured action plan. Progress will be tracked via a dedicated online portal.
+          </p>
+        </div>
+      </section>
+
+      {/* <About setCursorVariant={setCursorVariant} /> */}
+      {/* <Services setCursorVariant={setCursorVariant} /> */}
+      {/* <Projects setCursorVariant={setCursorVariant} /> */}
       <Contact setCursorVariant={setCursorVariant} />
       <Cursor mousePos={mousePos} variant={cursorVariant} />
     </div>

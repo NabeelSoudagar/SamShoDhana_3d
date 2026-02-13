@@ -105,22 +105,13 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <span className="block bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
-            INNOVATION
+            RESEARCH INNOVATION
           </span>
           <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
             REDEFINED
           </span>
         </motion.h1>
 
-        <motion.p
-          className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
-          style={{ textWrap: "balance" }}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          We transform ideas into extraordinary digital experiences through cutting-edge technology and creative excellence.
-        </motion.p>
 
         <motion.div
           className="flex flex-col sm:flex-row gap-6 justify-center"

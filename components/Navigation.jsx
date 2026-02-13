@@ -23,19 +23,19 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <motion.div
-          className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent relative z-50"
+          className="relative z-50 cursor-pointer"
           whileHover={{ scale: 1.05 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          SAMSHODHANA
+          <img src="/logo.png" alt="SamShoDhana Logo" className="h-16 w-auto brightness-200" />
         </motion.div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
-          {['About', 'Services', 'Projects', 'Contact'].map((item) => (
+        <div className="hidden md:flex space-x-6 lg:space-x-8">
+          {['About', 'Objectives', 'Execution', 'Benefits', 'Registration', 'Contact'].map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-white/80 hover:text-white transition-colors relative"
+              className="text-white/80 hover:text-white transition-colors relative text-sm uppercase tracking-wider font-medium"
               whileHover={{ y: -2 }}
             >
               {item}
@@ -76,7 +76,7 @@ export default function Navigation() {
           animate={{ opacity: isOpen ? 1 : 0, pointerEvents: isOpen ? 'auto' : 'none' }}
           transition={{ duration: 0.3 }}
         >
-          {['About', 'Services', 'Projects', 'Contact'].map((item) => (
+          {['About', 'Objectives', 'Execution', 'Benefits', 'Registration', 'Contact'].map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
